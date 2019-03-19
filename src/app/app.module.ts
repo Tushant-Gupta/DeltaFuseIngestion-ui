@@ -12,7 +12,8 @@ import { ScheduleService } from './services/schedule.service';
 import { ScheduleComponent } from './components/schedule/schedule.component';
 import { MainComponent } from './components/main/main.component';
 import { FormsModule } from '@angular/forms';
-
+import { DatadiscoveryComponent } from './components/data discovery/datadiscovery/datadiscovery.component';
+import { DatadiscoveryserviceService } from './services/datadiscoveryservice.service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,7 +21,8 @@ import { FormsModule } from '@angular/forms';
     HeaderComponent,
     FooterComponent,
     ScheduleComponent,
-    MainComponent
+    MainComponent,
+    DatadiscoveryComponent
   ],
   imports: [
     BrowserModule,
@@ -29,7 +31,7 @@ import { FormsModule } from '@angular/forms';
     FormsModule,
     ReactiveFormsModule
   ],
-  providers: [UploadService, ScheduleService],
+  providers: [UploadService, ScheduleService,DatadiscoveryserviceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
