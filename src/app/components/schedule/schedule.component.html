@@ -1,3 +1,34 @@
-<p>
-  schedule works!
-</p>
+<div class="form_container" >
+  <form [formGroup]="scheduleForm" (ngSubmit) = "onClickSubmit(scheduleForm.value)"  align="cemter">
+     <td>
+     <label>Date</label>
+     <input type="date" name="date" formControlName="date"/>
+     </td>
+     <td>
+     <label>Time </label>
+     <input type="time"  name="time" formControlName="time"/>
+     </td>
+     <td>
+     <label>Schedule Type </label>
+     <select name="scheduleType"  formControlName="type">
+                  <option value="weekly">Weekly</option>
+                  <option value="daily">Daily</option>
+                  <option value="monthly">Monthly</option>
+              </select>
+     </td>
+     <td>
+      <label>Location </label>
+     <select name="file1"  formControlName="file">
+                  <option value="shared1">Shared Drive 1</option>
+                  <option value="shared2">Shared Drive 2</option>
+                  <option value="FTP1">FTP 1</option>
+                  <option value="FTP2">FTP 2</option>
+              </select> 
+             <!-- <input type="file" name="file" formControlName="file">-->
+     </td>
+     <td>
+     <label>Schedule </label>
+     <button [disabled]="!scheduleForm.valid" value="schedule">Submit</button>
+     </td>
+  </form>
+</div>
