@@ -1,5 +1,43 @@
-<p>
-DATA DISCOVERY PAGE
-</p>
+<div class="card text-white bg-dark mb-3 center">
+    <div class="card-header">
+        Data Discovery
+    </div>
 
-<td><a routerLink="/"><button class="btn btn-secondary">BACK</button></a></td>
+    <div class="card-body">
+
+        <div class="form-horizontal">
+            <div class="form-group">
+                <div class="row">
+                    <form [formGroup]="dataDiscoveryForm" (ngSubmit)="onClickSubmit(dataDiscoveryForm.value)" align="center">
+                        <div class="col-md-12">
+                            <div class="input-group">
+                                <label>Discover Most Popular &nbsp;&nbsp; </label>
+                                <select name="dataDiscoveryType" formControlName="type">
+                                <option value="price">Based on Price</option>
+                                <option value="memory">Based on Memory</option>
+                                <!--<option value=""></option>
+                                <option value=""></option>-->
+                            </select>
+
+
+                                <!--<td>
+                            <label>Parameters </label>
+                            <select name="dataDiscoveryParameters" formControlName="parameter">
+                                <option value="dualSim">Dual Sim</option>
+                                <option value="Processor">Processor</option>
+                                <option value="memory">Memory</option>
+                            </select>
+                        </td>-->
+                                <div>&nbsp;&nbsp;</div>
+                                <div class="input-group-btn">
+                                    <input type="submit" [disabled]="!dataDiscoveryForm.valid" value="Discover" class="btn btn-secondary">
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <td><a routerLink="/"><button class="btn btn-secondary">BACK</button></a></td>
+</div>
