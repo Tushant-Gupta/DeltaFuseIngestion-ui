@@ -21,7 +21,7 @@ scheduleForm;
         date: new FormControl("",Validators.required),
 
         time: new FormControl("",Validators.required),
-        file: new FormControl("shared1",Validators.required),
+        
         type: new FormControl("weekly", Validators.required)
      });
   }
@@ -30,7 +30,7 @@ constructor(private _scheduleService : ScheduleService){}
 
     console.log(data.file);
     
-    this.schedule=new Schedule(data.date, data.time,data.type, data.file);
+    this.schedule=new Schedule(data.date, data.time,data.type);
 
      this._scheduleService.postSchedule(this.schedule).subscribe(
       schedule => {

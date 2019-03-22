@@ -14,6 +14,8 @@ import { MainComponent } from './components/main/main.component';
 import { FormsModule } from '@angular/forms';
 import { DatadiscoveryComponent } from './components/data discovery/datadiscovery/datadiscovery.component';
 import { DatadiscoveryserviceService } from './services/datadiscoveryservice.service';
+import { DatavisualizeComponent } from './components/datavisualize/datavisualize.component';
+import { ChartsModule } from 'ng2-charts';
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,14 +24,16 @@ import { DatadiscoveryserviceService } from './services/datadiscoveryservice.ser
     FooterComponent,
     ScheduleComponent,
     MainComponent,
-    DatadiscoveryComponent
+    DatadiscoveryComponent,
+    DatavisualizeComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    ChartsModule
   ],
   providers: [UploadService, ScheduleService,DatadiscoveryserviceService],
   bootstrap: [AppComponent]

@@ -25,7 +25,8 @@
             "styles": [
               "src/styles.css"
             ],
-            "scripts": [],
+          "scripts": ["C:/Users/shreyas.ketkar/Documents/Project/DeltaFuse UI/DeltaFuseIngestion-ui/node_modules/chart.js/dist/Chart.min.js"],
+          //  "scripts":["../node_modules/chart.js/dist/Chart.min.js"],
             "es5BrowserSupport": true
           },
           "configurations": {
