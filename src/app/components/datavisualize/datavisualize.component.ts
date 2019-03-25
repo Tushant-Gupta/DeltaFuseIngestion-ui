@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import{DownloadPdfService} from '../../services/download-pdf.service';
 @Component({
   selector: 'app-datavisualize',
   templateUrl: './datavisualize.component.html',
@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DatavisualizeComponent implements OnInit {
 
-  constructor() { }
+  constructor(private downloadPdfservice:DownloadPdfService) { }
 
   ngOnInit() {
   }
@@ -30,8 +30,8 @@ export class DatavisualizeComponent implements OnInit {
 
   // CHART COLOR.
   colors = [
-    { // 1st Year.
-      backgroundColor: 'rgba(30,83,100,0.2)'
+    { 
+      backgroundColor: 'rgba(30,83,100,0.4)'
     },
    
   ]
@@ -41,7 +41,14 @@ export class DatavisualizeComponent implements OnInit {
     console.log(event);
   }
 
+  getPdf(event)
+  {
+     console.log("getPDF called");
+    this.downloadPdfservice.getPdf();
+     
+      
 
+  }
 
 
 }

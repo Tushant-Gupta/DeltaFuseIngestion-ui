@@ -1,6 +1,6 @@
 <div class="card text-white bg-dark mb-3 center">
     <div class="card-header">
-        Data Discovery
+        Data BrainWave
     </div>
 
     <div class="card-body">
@@ -30,7 +30,13 @@
                         </td>-->
                                 <div>&nbsp;&nbsp;</div>
                                 <div class="input-group-btn">
-                                    <input type="submit" [disabled]="!dataDiscoveryForm.valid" value="Discover" class="btn btn-secondary">
+                                  <a routerLink="dataview"> <input type="submit" [disabled]="!dataDiscoveryForm.valid" value="Discover" class="btn btn-secondary"></a>
+                                  &nbsp;&nbsp;&nbsp;&nbsp;
+                                  
+                                  <a routerLink="./"><button class="btn btn-secondary">Reset</button> </a>
+                               &nbsp;&nbsp;&nbsp;&nbsp;
+                              <a routerLink="/"><button class="btn btn-secondary">BACK</button></a>
+                              
                                 </div>
                             </div>
                         </div>
@@ -39,6 +45,10 @@
             </div>
         </div>
     </div>
-    <td><a routerLink="/"><button class="btn btn-secondary">BACK</button></a></td>
+ 
+    
 </div>
-<app-datavisualize></app-datavisualize>
+<div>
+     <router-outlet></router-outlet>
+</div>
+ 

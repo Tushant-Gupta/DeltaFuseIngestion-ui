@@ -16,6 +16,7 @@ import { DatadiscoveryComponent } from './components/data discovery/datadiscover
 import { DatadiscoveryserviceService } from './services/datadiscoveryservice.service';
 import { DatavisualizeComponent } from './components/datavisualize/datavisualize.component';
 import { ChartsModule } from 'ng2-charts';
+import{DownloadPdfService} from './services/download-pdf.service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -35,7 +36,7 @@ import { ChartsModule } from 'ng2-charts';
     ReactiveFormsModule,
     ChartsModule
   ],
-  providers: [UploadService, ScheduleService,DatadiscoveryserviceService],
+  providers: [UploadService, ScheduleService,DatadiscoveryserviceService,DownloadPdfService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

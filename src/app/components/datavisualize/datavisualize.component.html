@@ -1,6 +1,4 @@
-<p>
-  datavisualize works!
-</p>
+<p> Data Publishing</p>
 <div align="right">
   <canvas
       baseChart
@@ -12,4 +10,5 @@
       [colors]="colors"
       (chartClick)="onChartClick($event)">
   </canvas>
+  <button class="btn btn-secondary" (click)="getPdf($event)">Download PDF</button>
 </div>
