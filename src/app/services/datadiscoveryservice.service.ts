@@ -16,11 +16,15 @@ const httpOptions = {
 })
 export class DatadiscoveryserviceService {
 
-  apiURL: string = 'http://localhost:8080/api/v1/discover';
-  searchType: String;
-  constructor(private http: HttpClient) { }
+  apiURL="";
+  constructor(private http:HttpClient){}
 
   postDiscover(DataDiscovery): Observable<DataDiscovery> {
+
+     
+
+    this.apiURL = 'http://localhost:8080/api/v1/' + DataDiscovery.type;
     return this.http.post<DataDiscovery>(this.apiURL, DataDiscovery);
-  }
+  
+}
 }

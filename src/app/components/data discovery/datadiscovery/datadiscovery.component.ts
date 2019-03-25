@@ -20,6 +20,7 @@ export class DatadiscoveryComponent implements OnInit {
   }
 
   onClickSubmit(data) {
+    alert("data discovery")
     this.dataDiscovery = new DataDiscovery(data.type);
     this._dataDiscoveryService.postDiscover(this.dataDiscovery).subscribe(
       discoveredData => {

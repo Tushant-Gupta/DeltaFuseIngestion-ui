@@ -38,7 +38,7 @@ constructor(private _scheduleService : ScheduleService){}
       }
   );
 
-  //alert("DATE = " +this.schedule.date + "  Time = "+this.schedule.time+ "  Schedule Type = "+this.schedule.scheduleType + "  File = "+ this.schedule.filePath);    }
+  alert("DATE = " +this.schedule.date + "  Time = "+this.schedule.time+ "  Schedule Type = "+this.schedule.scheduleType   );    
 
 
   }

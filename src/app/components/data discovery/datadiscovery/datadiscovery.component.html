@@ -14,7 +14,7 @@
                                 <label>Discover Most Popular &nbsp;&nbsp; </label>
                                 <select name="dataDiscoveryType" formControlName="type">
                                 <option value="price">Based on Price</option>
-                                <option value="memory">Based on Memory</option>
+                                <option value="sales">Based on Sales</option>
                                 <!--<option value=""></option>
                                 <option value=""></option>-->
                             </select>
@@ -30,13 +30,12 @@
                         </td>-->
                                 <div>&nbsp;&nbsp;</div>
                                 <div class="input-group-btn">
-                                  <a routerLink="dataview"> <input type="submit" [disabled]="!dataDiscoveryForm.valid" value="Discover" class="btn btn-secondary"></a>
-                                  &nbsp;&nbsp;&nbsp;&nbsp;
-                                  
-                                  <a routerLink="./"><button class="btn btn-secondary">Reset</button> </a>
-                               &nbsp;&nbsp;&nbsp;&nbsp;
-                              <a routerLink="/"><button class="btn btn-secondary">BACK</button></a>
-                              
+                                  <input type="submit" [disabled]="!dataDiscoveryForm.valid" value="Discover" class="btn btn-secondary">
+                                  &nbsp;&nbsp;
+                                  <a routerLink="dataview"><button class="btn btn-secondary">Visualize</button></a>
+                                   &nbsp;&nbsp;
+                              <a routerLink="./"><button class="btn btn-secondary">Reset</button> </a>
+                            
                                 </div>
                             </div>
                         </div>
@@ -45,7 +44,12 @@
             </div>
         </div>
     </div>
- 
+<td>
+       <a routerLink="/"><button class="btn btn-secondary">Back</button> </a>
+</td>
+                                  
+                                  
+                             
     
 </div>
 <div>
